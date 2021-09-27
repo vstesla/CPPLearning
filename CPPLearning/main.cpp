@@ -9,6 +9,58 @@
 
 using namespace std;
 
+class Chef{ //SuperClass
+public:
+    void makeChicken(){
+        cout << "The chef makes chicken" << endl;
+    }
+    void makeSalad(){
+        cout << "The chef makes salad" << endl;
+    }
+    void makeOtherdish(){
+        cout << "The chef makes Pork" << endl;
+    }
+};
+
+class ChineseChef: public Chef{ //SubClass
+public:
+    void makeYuxiangrousi(){
+        cout << "The Chinese chef makes yuxiangrousi" << endl;
+    }
+    void makeOtherdish(){
+        cout << "The chef makes BBQ ribs" << endl;
+    }
+};
+
+class Movie{
+private:
+    string actor;
+public:
+    string title;
+    string director;
+    string rating;
+
+    Movie(string aTitle, string aDirector, string aRating, string aActor){
+        title = aTitle;
+        director = aDirector;
+        rating = aRating;
+        setActor(aActor);
+
+
+    }
+    void setActor(string aActor){
+        if(aActor == "Steve" || aActor == "Johnson"){
+            actor = aActor;
+        }
+        else actor = "Unknown actor";
+
+    }
+
+    string getActor(){
+        return actor;
+    }
+};
+
 class Book {
 public:
     string title;
@@ -184,6 +236,20 @@ int housearea(double area) {
 }
 
 int main() {
+
+    Chef chef;
+    chef.makeChicken();
+    chef.makeOtherdish();
+    ChineseChef CNchef;
+    CNchef.makeYuxiangrousi();
+    CNchef.makeOtherdish();
+
+    Movie avengers("The Avengers", "Joss Whedon", "PG-13", "Steve");
+    cout << avengers.rating << endl;
+    avengers.setActor("Johnson");
+    cout << avengers.getActor() << endl;
+
+
 
     Book book1("Lord of the rings", "Tolkein", 500);
     cout << book1.title << endl;
