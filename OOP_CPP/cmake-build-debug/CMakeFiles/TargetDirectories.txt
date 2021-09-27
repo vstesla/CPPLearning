@@ -1,0 +1,3 @@
+/Users/vst/CLionProjects/OOP_CPP/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/vst/CLionProjects/OOP_CPP/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/vst/CLionProjects/OOP_CPP/cmake-build-debug/CMakeFiles/OOP_CPP.dir
